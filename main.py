@@ -53,6 +53,6 @@ if __name__ == '__main__':
                 members.sort(key=lambda tup: tup[2])
                 threshold = members[1][2]  # the distance of the second-closest member to home
                 closest = [m[:2] for m in members if m[2] <= threshold + 0.5]
-                message_content = "No one is home to feed Spike. Make sure someone gets home to feed him soon."
+                message_content = "No one is home to feed Spike! Make sure someone gets home to feed him soon."
                 Whatsapp.messenger(message_content, closest)
         time.sleep(60)
